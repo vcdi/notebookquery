@@ -1,0 +1,118 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "compass/reset";
+@import "normalize";
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+$font-stack: 'Open Sans', 'DejaVu Sans Unicode Icons', sans-serif;
+$outline-color: #5bcbe3;
+$text-color: #333333;
+$link-color: #03A9F4;
+
+$standard-spacing: 0.2em;
+
+$table-cell-line-height: 2em;
+
+.output_subarea {
+  a {
+    color: $link-color;
+  }
+
+  .full-width {
+    grid-column: full;
+    grid-template-columns: inherit;
+  }
+
+  th, td {
+    text-align: left;
+  }
+
+
+
+  .numeric-cell {
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+
+    span {
+      visibility: hidden;
+    }
+  }
+
+
+  .scroll-on-overflow {
+    max-width: 100vw;
+    overflow-x: auto;
+  }
+
+
+  p, ol, ul, table, img, picture, table, .scroll-on-overflow {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    margin-bottom: $standard-spacing * 4;
+    margin-top: $standard-spacing * 2;
+  }
+
+  ol, ul {
+    list-style-position: outside;
+    padding-left: 1.5em;
+  }
+
+  .scroll-on-overflow table {
+    margin: 0 auto;
+  }
+
+  table {
+    font-size: 1.5em;
+
+    *button {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  b, strong {
+    font-weight: bold;
+  }
+
+  i, em {
+    font-style: italic;
+  }
+
+
+  table {
+    border-collapse:separate;
+    border-spacing: 0.7em 0.5em;
+    text-align: left;
+
+    tbody {
+      tr {
+        height: 1em;
+        margin: 0.2em 0;
+
+        &:nth-child(2n+1) {
+          background: none;
+        }
+      }
+    }
+
+    th, td {
+      vertical-align: top;
+      padding: 0 0 0 0;
+      line-height: $table-cell-line-height;
+      word-wrap: break-word;
+    }
+  }
+}
